@@ -1,0 +1,21 @@
+diff -Nur collectd-4.10.6.orig/src/collectd.conf.in collectd-4.10.6/src/collectd.conf.in
+--- collectd-4.10.6.orig/src/collectd.conf.in	2012-02-19 03:05:01.000000000 -0700
++++ collectd-4.10.6/src/collectd.conf.in	2012-03-25 12:38:06.956243056 -0600
+@@ -120,7 +120,7 @@
+ #@BUILD_PLUGIN_PYTHON_TRUE@</LoadPlugin>
+ #@BUILD_PLUGIN_ROUTEROS_TRUE@LoadPlugin routeros
+ #@BUILD_PLUGIN_RRDCACHED_TRUE@LoadPlugin rrdcached
+-@LOAD_PLUGIN_RRDTOOL@LoadPlugin rrdtool
++#@LOAD_PLUGIN_RRDTOOL@LoadPlugin rrdtool
+ #@BUILD_PLUGIN_SENSORS_TRUE@LoadPlugin sensors
+ #@BUILD_PLUGIN_SERIAL_TRUE@LoadPlugin serial
+ #@BUILD_PLUGIN_SNMP_TRUE@LoadPlugin snmp
+@@ -763,6 +763,8 @@
+ #	CollectStatistics true
+ #</Plugin>
+ 
++Include "/etc/collectd.d"
++
+ #<Plugin rrdtool>
+ #	DataDir "@prefix@/var/lib/@PACKAGE_NAME@/rrd"
+ #	CacheTimeout 120

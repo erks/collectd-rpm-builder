@@ -1,0 +1,10 @@
+version: '2'
+services:
+  base:
+    build: .
+    volumes:
+      - ./RPMS:/root/rpmbuild/RPMS
+      - ./SPECS:/root/rpmbuild/SPECS
+  centos6:
+    extends:
+      service: base
