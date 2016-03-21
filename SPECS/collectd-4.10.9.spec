@@ -537,6 +537,7 @@ fi
 %defattr(-, root, root, -)
 %{_libdir}/collectd/java.so
 %attr(0644,root,root) /usr/share/%{name}/java/*.jar
+%doc %{_mandir}/man5/collectd-java.5*
 %endif
 
 %files mysql
