@@ -1,11 +1,23 @@
 version: '2'
 services:
   base:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./entrypoint.sh:/entrypoint.sh
       - ./RPMS:/root/rpmbuild/RPMS
       - ./SPECS:/root/rpmbuild/SPECS
+  centos5:
+    extends:
+      service: base
+    build:
+      dockerfile: Dockerfile-centos5
   centos6:
     extends:
       service: base
+  centos7:
+    extends:
+      service: base
+    build:
+      dockerfile: Dockerfile-centos7
