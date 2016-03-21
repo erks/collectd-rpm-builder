@@ -8,12 +8,11 @@ This is a docker-based script to build RPMs for collectd and its plugins targeti
 
 1. Copy `collectd.spec` for the version you want to build to `SPECS/collectd.spec`
 
-2. Run `make` to build rpms for centos6 (default), or its derivatives:
+2. Run `make` to build rpms for centos7 (default), or its derivatives:
 
     ```
-    make # build for centos6
+    make # build for centos7
     make centos6 # build for centos6
-    make centos7 # build for centos7
     ```
 
 3. If successful, the rpm files should be under `RPMS/` directory:
