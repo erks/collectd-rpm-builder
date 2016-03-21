@@ -12,7 +12,6 @@ This is a docker-based script to build RPMs for collectd and its plugins targeti
 
     ```
     make # build for centos6
-    make centos5 # build for centos5
     make centos6 # build for centos6
     make centos7 # build for centos7
     ```
