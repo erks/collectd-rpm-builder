@@ -6,7 +6,7 @@ clean:
 	@-rm -rf RPMS/
 
 .PHONY: build
-build: centos6
+build: centos7
 
 .PHONY: docker-build
 docker-build:
