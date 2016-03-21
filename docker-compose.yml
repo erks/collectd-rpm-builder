@@ -3,6 +3,7 @@ services:
   base:
     build: .
     volumes:
+      - ./entrypoint.sh:/entrypoint.sh
       - ./RPMS:/root/rpmbuild/RPMS
       - ./SPECS:/root/rpmbuild/SPECS
   centos6:
