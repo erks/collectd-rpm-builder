@@ -89,7 +89,7 @@ This plugin for collectd provides IPMI support.
 %package java
 Summary:        java module for collectd.
 Group:          System Environment/Daemons
-Requires:       collectd = %{version}-%{release}, java-devel
+Requires:       collectd = %{version}-%{release}, java
 %description java
 This plugin for collectd allows plugins to be written in Java and executed
 in an embedded JVM.
@@ -620,7 +620,7 @@ fi
 
 * Sat Feb 02 2013 Kevin Fenzi <kevin@scrye.com> 4.10.8-2
 - Add curl_json. Fixes bug #903866
-- Thanks to Sarkis Varozian for patch. 
+- Thanks to Sarkis Varozian for patch.
 
 * Sun Nov 18 2012 Kevin Fenzi <kevin@scrye.com> 4.10.8-1
 - Update to 4.10.8
@@ -639,8 +639,8 @@ fi
 - Add libgcrypt to fix bug #676059
 
 * Thu Mar 24 2011 Kevin Fenzi <kevin@scrye.com> - 4.10.2-2
-- Update for EPEL6. 
-- Ship sensors and libvirt on ppc64, since it's available. 
+- Update for EPEL6.
+- Ship sensors and libvirt on ppc64, since it's available.
 
 * Thu Dec 16 2010 Alan Pevec <apevec@redhat.com> 4.10.2-1
 - New upstream version 4.10.2

@@ -1,10 +1,12 @@
 # collectd rpm builder
 
-This is a docker-based script to build collectd and its plugins rpms for CentOS.
+This is a docker-based script to build RPMs for collectd and its plugins targeting CentOS.
 
 ## Usage
 
-1. Copy `collectd.spec` for the version you want to build to `SPECS/` directory, or use the provided spec files
+1. Obtain `collectd.spec` or use the provided ones under `SPECS/`. The spec file can be obtained from the source files (https://collectd.org/files/), usually existing under `contrib/redhat/` directory after uncompressing the original tarball. Please ensure the `Version:` tag is the same as the version of the tarball.
+
+1. Copy `collectd.spec` for the version you want to build to `SPECS/collectd.spec`
 
 2. Run `make` to build rpms for centos6 (default), or its derivatives:
 
@@ -39,6 +41,6 @@ This is a docker-based script to build collectd and its plugins rpms for CentOS.
         ├── collectd-virt-4.10.9-1.el6.x86_64.rpm
         ├── collectd-web-4.10.9-1.el6.x86_64.rpm
         └── perl-Collectd-4.10.9-1.el6.x86_64.rpm
-    
+
     1 directory, 18 files
     ```
