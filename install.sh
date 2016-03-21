@@ -10,4 +10,4 @@ yum -y install epel-release
 yum -y groupinstall 'Development Tools'
 yum -y install rpmdevtools yum-utils
 rpmdev-setuptree
-yum -y install java-1.6.0-openjdk-1.6.0.38
+yum -y install which java-1.6.0-openjdk-devel-1.6.0.38
